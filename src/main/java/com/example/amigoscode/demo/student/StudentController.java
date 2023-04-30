@@ -13,7 +13,7 @@ import java.util.List;
 public class StudentController {
     private final StudentService studentService;
 
-//    use sesc dependency injection to resolve the error on student service. using "@componeny" and "@autowired"
+//    use sesc dependency injection to resolve the error on student service. using "@component" and "@autowired"
     @Autowired
     public StudentController(StudentService studentService) {
         this.studentService = studentService;

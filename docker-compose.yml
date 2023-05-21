@@ -1,0 +1,43 @@
+version: '2'
+
+#networks:
+#  default:
+#    external: true
+#    name: student_default
+
+services:
+
+  studentapp:
+    image: iamaces/sesc:demo
+    restart: always
+    environment:
+      spring.datasource.url: jdbc:postgresql://studentdb:5432/student
+      spring.datasource.username: postgres
+      spring.datasource.password: password
+    ports:
+      - "8090:8090"
+    expose:
+      - "8090"
+#    depends_on:
+#      studentdb:
+#        condition: service_healthy
+    networks:
+      - default
+
+  studentdb:
+    image: postgres:alpine
+    restart: always
+#    volumes:
+#      - ./migrations/mysql-migrations.sql:/docker-entrypoint-initdb.d/mysql-mysql-migrations.sql
+    ports:
+      - "5432"
+    environment:
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: student
+    networks:
+      - default
+#    healthcheck:
+#      test: "/usr/bin/mysql --user=root --password=$$MYSQL_ROOT_PASSWORD --execute \"SHOW DATABASES;\""
+#      timeout: 2s
+#      retries: 10
+

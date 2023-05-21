@@ -1,0 +1,147 @@
+{
+	"info": {
+		"_postman_id": "af6b7c27-44d5-400f-bbe0-5aec3d61e844",
+		"name": "Sesc Component 2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "25742414"
+	},
+	"item": [
+		{
+			"name": "post students AWS",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Thalita\",\n        \"email\": \"Virgilio\",\n        \"dob\": \"2000-01-10\"\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.156.90.147:8090/api/v1/student",
+					"protocol": "http",
+					"host": [
+						"54",
+						"156",
+						"90",
+						"147"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get students AWS",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.156.90.147:8090/api/v1/student",
+					"protocol": "http",
+					"host": [
+						"54",
+						"156",
+						"90",
+						"147"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"student"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update student with ID AWS",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n        \"name\": \"Mark\",\n        \"email\": \"markupdate@134.ca\",\n        \"dob\": \"1993-01-10\"\n    },",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.156.90.147:8090/api/v1/student/2",
+					"protocol": "http",
+					"host": [
+						"54",
+						"156",
+						"90",
+						"147"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "delete students AWS",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://54.156.90.147:8090/api/v1/student/3",
+					"protocol": "http",
+					"host": [
+						"54",
+						"156",
+						"90",
+						"147"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"v1",
+						"student",
+						"3"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
